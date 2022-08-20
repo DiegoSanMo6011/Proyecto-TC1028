@@ -21,6 +21,14 @@ Este proyecto se trata de una calculadora que te permite utilizar tres de las ec
 					C= raiz cuadrada de (hipotenusa^2-cateto^2)
 					print (C)
 		Si la respuesta es 2
-//Aqui empieza la regla de tres
-
-		
+			print("ingrese los valores, primero los que se tienen completos y despues el d ela incognita")
+			pedir constante_comp
+			pedir variable_comp
+			Pedir constate_imc
+			resp=(constante_comp*constante_inc)/variable_comp
+			print (resp)
+		Si la respuesra es 3 
+		 	Pedir binomio_1
+			pedir binomio_2
+			resp=binomio_1**2 + 2*Binomio_1*binomio_2) + binomio_2**2
+			´rimt res
