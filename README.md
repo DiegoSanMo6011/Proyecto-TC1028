@@ -35,4 +35,5 @@ Este proyecto se trata de una calculadora que te permite utilizar tres de las ec
 ### Instrucciones
 
 Descargar el arvhivo y correr en terminal con:
+
 	python TC1028_a01276011.py
