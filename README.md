@@ -31,4 +31,8 @@ Este proyecto se trata de una calculadora que te permite utilizar tres de las ec
 		 	Pedir binomio_1
 			pedir binomio_2
 			resp=binomio_1**2 + 2*Binomio_1*binomio_2) + binomio_2**2
-			´rimt res
+			primt res
+### Instrucciones
+
+Descargar el arvhivo y correr en terminal con:
+	python TC1028_a01276011.py
