@@ -36,4 +36,4 @@ Este proyecto se trata de una calculadora que te permite utilizar tres de las ec
 
 Descargar el arvhivo y correr en terminal con:
 
-	python TC1028_a01276011.py
+	python TC1028_A01276011_avance3.py
