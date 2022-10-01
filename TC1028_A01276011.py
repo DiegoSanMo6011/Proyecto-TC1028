@@ -40,11 +40,19 @@ def caida_tiempovf(vf,g):
     t=vf/g
     return t
 #respuesta
-def respuesta (resp):
-    print ("El valor que busca es:",resp)
+def respuesta(resp):
+    lista.append(resp)
+    
+#continuar o seguir
+def cont_sig(pregunta):
+    if pregunta==1:
+        print("los resultados son: ",lista)
+        lista.clear()
 #error
 def error():
     print("Ese no es un valor valido, corra el programa de nuevo")
+#crear lista
+lista=[]
 #Iniciar/salir Programa
 ban=int(input("Introduce 1, para iniciar el programa"))
 while ban==1:
@@ -58,14 +66,18 @@ while ban==1:
             cat_1=float(input("Ingresa un cateto"))
             cat_2=float(input("Ingresa el otro cateto"))
             respues=pitagorashipo(cat_1,cat_2)
-            respuestaf=respuesta(respues)
+            respuesta(respues)
+            preg=int(input("¿Desea ver los resultados o seguir calculando?, 1. Ver resultados 2.Seguir Calculando"))
+            cont_sig(preg)
         #cateto
         elif valor==2:
             cat_1=float(input("Ingresa un cateto"))
             Hipo=float(input("Ingresa la hipotenusa"))
             if (Hipo>cat_1):
                 respues=pitagorascateto(Hipo,cat_1)
-                respuestaf=respuesta(respues)
+                respuesta(respues)
+                preg=int(input("¿Desea ver los resultados o seguir calculando?, 1. Ver resultados 2.Seguir Calculando"))
+                cont_sig(preg)
             else:
                 error()
         else:
@@ -75,9 +87,11 @@ while ban==1:
     elif ecuacion_n==2:
         const_comp=float(input("Ingrese el valor de la constante de la cual conoce la variable"))
         vari_comp=float(input("Ingrese el valor de la variable"))
-        const_inc=float(input("ngrese el valor de la constante de la cual NO conoce la variable"))
+        const_inc=float(input("Ingrese el valor de la constante de la cual NO conoce la variable"))
         respues=regla_de_tres(vari_comp,const_inc,const_comp)
-        respuestaf=respuesta(respues)
+        respuesta(respues)
+        preg=int(input("¿Desea ver los resultados o seguir calculando?, 1. Ver resultados 2.Seguir Calculando"))
+        cont_sig(preg)
         ban=1
     #Formula general
     elif ecuacion_n==3:
@@ -85,7 +99,9 @@ while ban==1:
         expo=float(input("Ingrese el valor que tiene una incognita"))
         sinexpo=float(input("Ingrese el valor sin incognita"))
         respues=fromula_gene(cuadrado,expo,sinexpo)
-        respuestaf=respuesta(respues)
+        respuesta(respues)
+        preg=int(input("¿Desea ver los resultados o seguir calculando?, 1. Ver resultados 2.Seguir Calculando"))
+        cont_sig(preg)
         ban=1
     #Caida libre
     elif ecuacion_n==4:
@@ -95,18 +111,24 @@ while ban==1:
         if valor==1:
             tiempo=int(input("Ingrese el tiempo"))
             respues=caida_altura(tiempo,gravedad)
-            respuestaf=respuesta(respues)
+            respuesta(respues)
+            preg=int(input("¿Desea ver los resultados o seguir calculando?, 1. Ver resultados 2.Seguir Calculando"))
+            cont_sig(preg)
         #Velocidad final
         elif valor==2:
             datos=int(input("¿Qué dato quiere utilizar para encontar el valor?, 1. ALtura, 2.Tiempo"))
             if datos==1:
                 altura=float(input("Ingrese la altura"))
                 respues=caida_velfinh(altura,gravedad)
-                respuestaf=respuesta(respues)
+                respuesta(respues)
+                preg=int(input("¿Desea ver los resultados o seguir calculando?, 1. Ver resultados 2.Seguir Calculando"))
+                cont_sig(preg)
             elif datos==2:
                 tiempo=int(input("Ingrese el tiempo"))
                 respues=caida_velfint(gravedad,tiempo)
-                respuestaf=respuesta(respues)
+                respuesta(respues)
+                preg=int(input("¿Desea ver los resultados o seguir calculando?, 1. Ver resultados 2.Seguir Calculando"))
+                cont_sig(preg)
             else:
                 error()
         #tiempo
@@ -115,11 +137,15 @@ while ban==1:
             if datos==1:
                 altura=float(input("Ingrese la altura"))
                 respues=caida_tiempoh(altura,gravedad)
-                respuestaf=respuesta(respues)
+                respuesta(respues)
+                preg=int(input("¿Desea ver los resultados o seguir calculando?, 1. Ver resultados 2.Seguir Calculando"))
+                cont_sig(preg)
             elif datos==2:
                 velfin=float(input("Ingrese la velocidad final"))
                 respues=caida_tiempovf(velfin,gravedad)
-                respuestaf=respuesta(respues)
+                respuesta(respues)
+                preg=int(input("¿Desea ver los resultados o seguir calculando?, 1. Ver resultados 2.Seguir Calculando"))
+                cont_sig(preg)
             else:
                 error()
         else:
