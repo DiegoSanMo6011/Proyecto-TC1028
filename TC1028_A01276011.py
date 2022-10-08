@@ -20,7 +20,9 @@ def fromula_gene(a,b,c):
     if a!= 0:
         incognita_1=(-b+(((b**2)-(4*a*c))**0.5))/(2*a)
         incognita_2=(-b-(((b**2)-(4*a*c))**0.5))/(2*a)
-        return incognita_1,incognita_2
+        incognitas.append(incognita_1)
+        incognitas.append(incognita_2)
+        return incognitas
     else:
         return "El valor de a no puede ser 0"
 def caida_altura(t,g):
@@ -52,6 +54,7 @@ def cont_sig(pregunta):
 def error():
     print("Ese no es un valor valido, corra el programa de nuevo")
 #crear lista
+incognitas=[]
 lista=[]
 #Iniciar/salir Programa
 ban=int(input("Introduce 1, para iniciar el programa"))
@@ -98,8 +101,8 @@ while ban==1:
         cuadrado=float(input("Ingrese el valor que tiene una incognita elevada al cuadrado"))
         expo=float(input("Ingrese el valor que tiene una incognita"))
         sinexpo=float(input("Ingrese el valor sin incognita"))
-        respues=fromula_gene(cuadrado,expo,sinexpo)
-        respuesta(respues)
+        fromula_gene(cuadrado,expo,sinexpo)
+        respuesta(incognitas)
         preg=int(input("¿Desea ver los resultados o seguir calculando?, 1. Ver resultados 2.Seguir Calculando"))
         cont_sig(preg)
         ban=1
@@ -157,5 +160,3 @@ while ban==1:
         error()
 else:
     print("hasta pronto")
-
-
