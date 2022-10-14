@@ -1,22 +1,57 @@
 """
 Proyecto TC1028 "Mates Utiles y bonitas :)"
-Calculadora de: Formula general, Regla de tres, Teorema de Pitagoras
+Calculadora de: teorema de pitagoras, regla de tres, formula general y caida libre
+El programa pregunta la formula o formulas que necesita oucpar el usuario y le pide los datos necesarios para
+resolverla, devuelve la lista de resultados.
 """
 #bibliotecas
 import math
+
+"""
+================== funciones formulas  =====================================
+"""
+
 #funciones pitagoras
 def pitagorascateto(hipo,cateto_1):
+    """
+    (uso de operadores, uso de funciones)
+    recibe: hipo valor numérico, cateto_1 valor numérico
+    Aplica teorema  de pitagoras.
+    devuelve: resultado de operación numérico (cateto).
+    """
     cateto_2=math.sqrt(hipo**2-cateto_1**2)
     return cateto_2
 def pitagorashipo(cateto_1,cateto_2):
+    """
+    (uso de operadores, uso de funciones)
+    recibe: cateto_1 valor numérico, cateto_2 valor numérico
+    Aplica teorema  de pitagoras.
+    devuelve: resultado de operación numérico (hipotenusa).
+    """
     hipo= math.sqrt(cateto_1**2+cateto_2**2)
     return hipo
+
 #funcion regla de tres
 def regla_de_tres(variable_comp,constante_inc,constante_comp):
-     resp=(variable_comp*constante_inc)/constante_comp
-     return resp
-#funcion regla general
+    """
+    (uso de operadores, uso de funciones)
+    recibe: variable_comp valor numérico, constante_inc valor numérico y 
+        constante_comp valor numérico.
+    Divide al producto de variable_comp y constante_inc entre la constante_comp
+    devuelve: resultado de operación numérico 
+    """  
+    resp=(variable_comp*constante_inc)/constante_comp
+    return resp
+
+#funcion formula general
 def fromula_gene(a,b,c):
+    """
+    (uso de operadores, uso de funciones)
+    recibe: a valor numérico,b valor numérico y 
+        c valor numérico.
+    Aplica formula general
+    devuelve: resultado de operación numérico 
+    """  
     if a!= 0:
         incognita_1=(-b+(((b**2)-(4*a*c))**0.5))/(2*a)
         incognita_2=(-b-(((b**2)-(4*a*c))**0.5))/(2*a)
@@ -25,44 +60,111 @@ def fromula_gene(a,b,c):
         return incognitas
     else:
         return "El valor de a no puede ser 0"
+
+#funciones caida libre 
 def caida_altura(t,g):
-    
+    """
+    (uso de operadores, uso de funciones)
+    recibe: t valor numérico y 
+        g valor numérico.
+    multiplica 1/2g por t^2
+    devuelve: resultado de operación numérico 
+    """  
     h=1/2*g*t**2
     return h
 def caida_velfinh(h,g):
+    """
+    (uso de operadores, uso de funciones)
+    recibe: h valor numérico y 
+        g valor numérico.
+    raiz cuadradada de 2hg
+    devuelve: resultado de operación numérico 
+    """ 
     vf=math.sqrt(2*h*g)
     return vf
 def caida_velfint(g,t):
+    """
+    (uso de operadores, uso de funciones)
+    recibe: g valor numérico y 
+        t valor numérico.
+    multiplica g*t
+    devuelve: resultado de operación numérico 
+    """ 
     vf=g*t
     return vf
 def caida_tiempoh(h,g):
+    """
+    (uso de operadores, uso de funciones)
+    recibe: h valor numérico y 
+        g valor numérico.
+    raiz cuadrada de (2h/g)
+    devuelve: resultado de operación numérico 
+    """ 
     t=math.sqrt((2*h)/(g))
     return t
 def caida_tiempovf(vf,g):
+    """
+    (uso de operadores, uso de funciones)
+    recibe: vf valor numérico y 
+        g valor numérico.
+    divide vf/g
+    devuelve: resultado de operación numérico 
+    """ 
     t=vf/g
     return t
-#respuesta
+
+"""
+================== funciones auxiliares  =======================================
+"""
+
 def respuesta(resp):
+    """
+    (uso de funciones, lista, listas anidadas)
+    agrega a la lista las respuestas de la formulas ocupadas, estás pueden ser otras listas.
+    """
     lista.append(resp)
     
 #continuar o seguir
 def cont_sig(pregunta):
+    """
+    funcion auxiliar para imprimir
+    Muestra en pantalla la lista de respuestas obtenidas
+    """
     if pregunta==1:
         print("los resultados son: ",lista)
         lista.clear()
+
 #error
 def error():
+    """
+    funcion auxiliar para imprimir
+    imprime un mensaje de error
+    """
     print("Ese no es un valor valido, corra el programa de nuevo")
+
+"""
+========  parte principal del programa ========================================
+"""
+
 #crear lista
 incognitas=[]
 lista=[]
+
 #Iniciar/salir Programa
 ban=int(input("Introduce 1, para iniciar el programa"))
 while ban==1:
+    """
+    (uso de ciclos)
+    repite el programa hasta que el usuario escoga 
+    la opcion salir y ban==0
+    """
     #Menu
     ecuacion_n=int(input("¿Qué ecuación necesita?: 1. Pitagoras, 2. Regla de tres, 3.Formula general,4. Caida Libre,5. Salir"))
     #pitagoras
     if ecuacion_n==1:
+        """
+        (uso de condicionales y condicionales anidados)
+        """
         valor=int(input("¿Qué valor quiere calcular?: 1. hipotenusa, 2. cateto"))
         #hipotenusa
         if valor==1:
