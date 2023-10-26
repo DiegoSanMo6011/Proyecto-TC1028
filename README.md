@@ -2,7 +2,7 @@
 ### Diego Gerardo Sánchez Moreno A01276011
 ### Clase: TC1028  	Institución: Tecnológico de Monterrey
 ### 18/08/2022
-Este proyecto se trata de una calculadora que te permite utilizar tres de las ecuaciones que a mi parecer son las más utilez y por ende utilizadas, estas son, Teorema de Pitagoras, Regla de tres y Trinomio al cuadrado perfecto.
+Este proyecto para la materia TC1028 	Pensamiento computacional para ingeniería, el codigo esta hecho en python y  trata de una calculadora que te permite utilizar tres de las ecuaciones que a mi parecer son las más utilez y por ende utilizadas, estas son, Teorema de Pitagoras, Regla de tres y Trinomio al cuadrado perfecto.
 
 # Pseudo Codigo
 	print ("¿Qué ecuación necesita?, 1. Pitagoras, 2. Regla de tres, 3.TCP"}
